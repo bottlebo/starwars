@@ -43,7 +43,8 @@
       "semi": "off",
       "space-before-function-paren": "off",
       "eqeqeq": "off",
-      "indent": "off"
+      "indent": "off",
+      "no-useless-escape": "off"
     },
     "parserOptions": {
       "parser": "babel-eslint"
