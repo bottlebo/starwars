@@ -1,32 +1,106 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <q-layout view="lHh Lpr lFf">
+    <q-header elevated>
+      <q-toolbar class="bg-sw1">
+        <q-btn
+          flat
+          dense
+          round
+          @click="leftDrawerOpen = !leftDrawerOpen"
+          aria-label="Menu"
+          icon="menu"
+        />
+        <q-toolbar-title>
+          <div style="line-height:15px;margin-top: 10px;">Star Wars API</div>
+          <div class="text-caption">May the Force be with you</div>
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-header>
+
+    <q-drawer
+      v-model="leftDrawerOpen"
+      content-class="bg-sw2 shadow-2"
+    >
+     <q-list no-border link inset-delimiter class="nav">
+          <q-item-label header>Navigation</q-item-label>
+          <q-item to="/" exact>
+            <q-item-section avatar>
+              <q-icon name="person" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Characters</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item to="/about">
+            <q-item-section avatar>
+              <q-icon name="public" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Planet</q-item-label>
+            </q-item-section>
+          </q-item>
+          <q-item to="/about">
+            <q-item-section avatar>
+              <q-icon name="directions_car" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Vehicles</q-item-label>
+            </q-item-section>
+          </q-item>
+           <q-item to="/about">
+            <q-item-section avatar>
+              <q-icon name="flight_takeoff" />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>Starships</q-item-label>
+            </q-item-section>
+          </q-item>
+     </q-list>
+    </q-drawer>
+    <q-page-container class="bg-light" >
+      <router-view/>
+    </q-page-container>
+  </q-layout>
 </template>
 
+<script>
+
+export default {
+  name: 'LayoutDefault',
+  data () {
+    return {
+      leftDrawerOpen: false
+    }
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.text-light {
+  color:#BCC8DD;
 }
-
-#nav {
-  padding: 30px;
+.bg-light {
+  background-color: #BCC8DD;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.bg-sw1 {
+  background-color: #4C596E;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.bg-sw2 {
+  background-color: #6790BB;
+}
+.bg-sw3 {
+  background-color: #AB866C;
+}
+.text-sw3 {
+  color: #AB866C;
+}
+.text-sw2 {
+  color: #6790BB;
+}
+.text-light {
+  color: #BCC8DD;
+}
+.nav .q-item.q-router-link--active, .nav .q-item--active {
+  color: #fff;
 }
 </style>

@@ -1,5 +1,7 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+<q-page>
+  <div class="absolute-center">
+    <h5 class="text-sw2">Coming soon</h5>
   </div>
+</q-page>
 </template>
