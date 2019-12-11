@@ -1,24 +1,16 @@
 # starwars
+## The task:
 
-## Project setup
-```
-npm install
-```
+Develop a web application that displays information about the characters of the Star Wars universe and their ships.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+In the list, you can select any character and see its characteristics and the names of the films in which they appeared.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+In the future, it is planned to expand this application so that it displays information about planets, ships from the universe.
 
-### Lints and fixes files
-```
-npm run lint
-```
+Data is taken on the backend from the site https://swapi.co
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The design style is minimalistic, you can use any framework for layout.
+
+In the color scheme, it is desirable to use any palette from the set https://www.vox.com/culture/2015/12/17/10322514/star-wars-colors
+
+
