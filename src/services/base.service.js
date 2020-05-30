@@ -1,6 +1,6 @@
 import axios from 'axios'
 export class BaseService {
-  api = 'https://swapi.co/api/';
+  api = 'https://swapi.dev/api/';
   get (url) {
     return new Promise(function (resolve, reject) {
       axios.get(url, {
