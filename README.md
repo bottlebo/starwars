@@ -7,7 +7,7 @@ In the list, you can select any character and see its characteristics and the na
 
 In the future, it is planned to expand this application so that it displays information about planets, ships from the universe.
 
-Data is taken on the backend from the site https://swapi.co
+Data is taken on the backend from the site https://swapi.dev
 
 The design style is minimalistic, you can use any framework for layout.
 
